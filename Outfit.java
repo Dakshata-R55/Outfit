@@ -27,8 +27,9 @@ public abstract class Outfit implements OutfitInt {
         int tp=(this.getPrice()*cus.getPiece());
         System.out.println(tp);
     }
-    public void tp(int rent){
-        int tp=rent*cus.getPiece();
+    public void tp(int rent,int piece){
+        int tp=rent*Piece;
 
     }
 }
+
