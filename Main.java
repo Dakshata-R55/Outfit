@@ -37,10 +37,11 @@ if(cus.getDressTyp().equals("western outfit")) {
     OutfitInt wo = new Western(500);
     wo.setCus(cus);
     OutfitInt[] of= cus.getOf();
-    of[0] = wo;
+    of[0] = wo;//used array merhod to pass address the address of outfit to user
     System.out.println(cus.getDressTyp());
     System.out.println("price");
     wo.tp();
+    wo.ret();//override
 }
     else if(cus.getDressTyp().equals("tradition outfit")) {
         OutfitInt to = new Tradition(700);
@@ -49,7 +50,7 @@ if(cus.getDressTyp().equals("western outfit")) {
         of[1] = to;
         System.out.println(cus.getDressTyp());
         System.out.println("price");
-        to.tp();
+        to.tp(250,4);//overload
     }
 else{
     System.out.println("didn't find anything");}
@@ -61,20 +62,23 @@ else{
         of[0] = wo;
         System.out.println(cus1.getDressTyp());
         System.out.println("price" );
-        wo.tp();
+        wo.tp(350,5);//overload
+
     }
 
    else if(cus1.getDressTyp().equals("tradition outfit")) {
         OutfitInt to = new Tradition(700);
         to.setCus(cus1);
         OutfitInt[] of = cus1.getOf();
-        of[0] = to;
+        of[1] = to;
         System.out.println(cus1.getDressTyp());
         System.out.println("price" );
         to.tp();
+       to.ret();
 }
     else{
         System.out.println("didn't find anything");
 }
 }
     }
+
